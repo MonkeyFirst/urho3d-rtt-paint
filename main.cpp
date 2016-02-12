@@ -100,12 +100,12 @@ public:
         
     }
 
-    Color GetRandomColor(float brithness = 0.5f) const
+    Color GetRandomColor(float brightness = 0.5f) const
     {
-        float r = Urho3D::Random(Random(1.0f) < 0.5f ? 0.0f : brithness, 1.0f);
-        float g = Urho3D::Random(Random(1.0f) < 0.5f ? 0.0f : brithness, 1.0f);
-        float b = Urho3D::Random(Random(1.0f) < 0.5f ? 0.0f : brithness, 1.0f);
-        float a = Urho3D::Random(Random(1.0f) < 0.5f ? 0.0f : brithness, 1.0f);
+        float r = Urho3D::Random(Random(1.0f) < 0.5f ? 0.0f : brightness, 1.0f);
+        float g = Urho3D::Random(Random(1.0f) < 0.5f ? 0.0f : brightness, 1.0f);
+        float b = Urho3D::Random(Random(1.0f) < 0.5f ? 0.0f : brightness, 1.0f);
+        float a = Urho3D::Random(Random(1.0f) < 0.5f ? 0.0f : brightness, 1.0f);
 
         return Color(r,g,b,a);
     }
