@@ -74,13 +74,13 @@ public:
 
         brushNode = scene->GetChild("Brush");
         brushModel = brushNode->GetComponent<StaticModel>();
-        brushModel->SetViewMask(2); // hide painbrush by default at program startup
+        brushModel->SetViewMask(0); // hide painbrush by default at program startup
         brushColor = Color(1.0f,1.0f,1.0f,1.0f);
         brushMaterial = brushModel->GetMaterial();
 
         previewBrushNode = brushNode->GetChild("PreviewBrush");
         previewBrushModel = previewBrushNode->GetComponent<StaticModel>();
-        previewBrushModel->SetViewMask(1); // it have opposite view mask to real paintbrush - brushModel, mask = 1;
+        previewBrushModel->SetViewMask(1); // it must have the opposite view mask value to real paintbrush (brushModel)
         previewBrushMaterial = previewBrushModel->GetMaterial(); // we try to keep preview mat in actual settings as and main brushMaterial for user preview
 
         brushSize = defaultBrushSize;
