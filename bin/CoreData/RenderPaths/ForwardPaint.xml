@@ -1,0 +1,25 @@
+<renderpath>
+    
+    <rendertarget name="canvas1" sizedivisor="1 1" format="rgba" />
+    <command type="clear" enabled="false" tag="ClearCanvas" color="fog" depth="1.0" stencil="0" output="canvas1" />
+    <command type="scenepass" tag="Drawning" pass="handpaint" vertexlights="true" metadata="base" output="canvas1" />
+    
+    <command type="clear" color="fog" depth="1.0" stencil="0" />
+
+    <command type="quad" enabled="True" tag="ShowRTT" vs="CopyFramebuffer" ps="CopyFramebuffer" blend="replace" output="viewport">
+        <texture unit="diffuse" name="canvas1" />
+    </command>
+
+    <command type="scenepass" pass="base" vertexlights="true" metadata="base" />
+            
+    <command type="forwardlights" pass="light" />
+    <command type="scenepass" pass="postopaque" />
+    <command type="scenepass" pass="refract">
+        <texture unit="environment" name="viewport" />
+    </command>
+    <command type="scenepass" pass="alpha" vertexlights="true" sort="backtofront" metadata="alpha" />
+    <command type="scenepass" pass="postalpha" sort="backtofront" />
+    
+
+    
+</renderpath>

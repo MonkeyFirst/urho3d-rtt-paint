@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<scene id="1">
+	<attribute name="Name" value="" />
+	<attribute name="Time Scale" value="1" />
+	<attribute name="Smoothing Constant" value="50" />
+	<attribute name="Snap Threshold" value="5" />
+	<attribute name="Elapsed Time" value="0" />
+	<attribute name="Next Replicated Node ID" value="1" />
+	<attribute name="Next Replicated Component ID" value="3" />
+	<attribute name="Next Local Node ID" value="16777239" />
+	<attribute name="Next Local Component ID" value="16777393" />
+	<attribute name="Variables" />
+	<attribute name="Variable Names" value="" />
+	<component type="Octree" id="1">
+		<attribute name="Number of Levels" value="6" />
+	</component>
+	<component type="DebugRenderer" id="2" />
+	<node id="16777217">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 -0.01 -0.141413" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="100 100 100" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777228">
+			<attribute name="Model" value="Model;Models/Plane.mdl" />
+			<attribute name="Material" value="Material;" />
+		</component>
+		<node id="16777231">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0.131822 0.100104 -0.35361" />
+			<attribute name="Rotation" value="0.970254 0.103572 -0.217575 0.0232249" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="Light" id="16777352">
+				<attribute name="Light Type" value="Directional" />
+				<attribute name="Range" value="1420" />
+				<attribute name="Spot FOV" value="45" />
+				<attribute name="Arealight width" value="8.75" />
+				<attribute name="Arealight height" value="1.92" />
+				<attribute name="Cast Shadows" value="true" />
+				<attribute name="CSM Splits" value="10 50 200 0" />
+				<attribute name="Depth Constant Bias" value="0.0001" />
+				<attribute name="Near/Farclip Ratio" value="0.02" />
+			</component>
+		</node>
+	</node>
+	<node id="16777220">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="-0.655439 0.486775 -4.85626" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777231">
+			<attribute name="Model" value="Model;Models/Box.mdl" />
+			<attribute name="Material" value="Material;" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+	</node>
+	<node id="16777218">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="light" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="-3.53456 8.80661 -16.0946" />
+		<attribute name="Rotation" value="0.844858 0.225087 0.454635 -0.169875" />
+		<attribute name="Scale" value="100 100 100" />
+		<attribute name="Variables" />
+		<component type="Light" id="16777229">
+			<attribute name="Is Enabled" value="false" />
+			<attribute name="Light Type" value="Directional" />
+			<attribute name="Color" value="0.15698 0.191406 0.17168 1" />
+			<attribute name="Range" value="20" />
+			<attribute name="Spot FOV" value="90.67" />
+			<attribute name="Arealight width" value="8.65" />
+			<attribute name="Arealight height" value="1.92" />
+			<attribute name="Cast Shadows" value="true" />
+			<attribute name="CSM Splits" value="10 50 200 0" />
+			<attribute name="Depth Constant Bias" value="0.0001" />
+			<attribute name="Near/Farclip Ratio" value="0.02" />
+		</component>
+	</node>
+	<node id="16777232">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="1.37268 2.48089 -9.65715" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="5 5 5" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777353">
+			<attribute name="Model" value="Model;Models/Box.mdl" />
+			<attribute name="Material" value="Material;" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+	</node>
+	<node id="16777233">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="1.37268 0.486775 2.19173" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777354">
+			<attribute name="Model" value="Model;Models/Box.mdl" />
+			<attribute name="Material" value="Material;" />
+			<attribute name="Cast Shadows" value="true" />
+		</component>
+	</node>
+	<node id="16777234">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="23.9518 3.65497 0.0632844" />
+		<attribute name="Rotation" value="0.944569 0.328311 0 0" />
+		<attribute name="Scale" value="100 100 100" />
+		<attribute name="Variables" />
+		<component type="Light" id="16777355">
+			<attribute name="Light Type" value="Area" />
+			<attribute name="Arealight width" value="3.35" />
+		</component>
+	</node>
+	<node id="16777236">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="4.00847 10.2196 -4.52026" />
+		<attribute name="Rotation" value="0.844858 0.225087 0.454635 -0.169875" />
+		<attribute name="Scale" value="100 100 100" />
+		<attribute name="Variables" />
+		<component type="Light" id="16777368">
+			<attribute name="Color" value="1 0.155273 0.0655976 1" />
+			<attribute name="Range" value="30" />
+			<attribute name="Spot FOV" value="90.05" />
+			<attribute name="Arealight width" value="8.65" />
+			<attribute name="Arealight height" value="1.92" />
+			<attribute name="Light Shape Texture" value="TextureCube;" />
+			<attribute name="CSM Splits" value="10 50 200 0" />
+			<attribute name="Depth Constant Bias" value="0.0001" />
+			<attribute name="Near/Farclip Ratio" value="0.02" />
+		</component>
+	</node>
+</scene>

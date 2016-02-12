@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<material>
+	<technique name="Techniques/DiffSiluetWidth.xml" quality="1" loddistance="0" />
+	<texture unit="diffuse" name="Textures/StoneDiffuse.dds" />
+	<parameter name="UOffset" value="1 0 0 0" />
+	<parameter name="VOffset" value="0 1 0 0" />
+	<parameter name="MatDiffColor" value="0.936 0.934 0.968 1" />
+	<parameter name="MatEmissiveColor" value="0 0 0" />
+	<parameter name="MatEnvMapColor" value="1 1 1" />
+	<parameter name="MatSpecColor" value="0.1 0.3 0.3 16" />
+	<parameter name="SiluetWidth" value="0.01" />
+	<cull value="ccw" />
+	<shadowcull value="ccw" />
+	<fill value="solid" />
+	<depthbias constant="0" slopescaled="0" />
+	<renderorder value="128" />
+</material>
