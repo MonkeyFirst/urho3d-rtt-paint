@@ -4,6 +4,24 @@
     <command type="clear" enabled="false" tag="ClearCanvas" color="fog" depth="1.0" stencil="0" output="canvas1" />
     <command type="scenepass" tag="Drawning" pass="handpaint" vertexlights="true" metadata="base" output="canvas1" />
     
+    <rendertarget name="blurh" tag="Blur" sizedivisor="1 1" format="rgba" filter="true" />
+    <rendertarget name="blurv" tag="Blur" sizedivisor="1 1" format="rgba" filter="true" />
+    <command type="quad" tag="Blur" vs="Blur" ps="Blur" psdefines="BLUR3" output="blurh">
+        <parameter name="BlurDir" value="1.0 0.0" />
+        <parameter name="BlurRadius" value="1.0" />
+        <parameter name="BlurSigma" value="1.0" />
+        <texture unit="diffuse" name="canvas1" />
+    </command>
+    <command type="quad" tag="Blur" vs="Blur" ps="Blur" psdefines="BLUR3" output="blurv">
+        <parameter name="BlurDir" value="0.0 1.0" />
+        <parameter name="BlurRadius" value="1.0" />
+        <parameter name="BlurSigma" value="1.0" />
+        <texture unit="diffuse" name="blurh" />
+    </command>
+    <command type="quad" tag="Blur" vs="CopyFramebuffer" ps="CopyFramebuffer" output="canvas1">
+        <texture unit="diffuse" name="blurv" />
+    </command>
+
     <command type="clear" color="fog" depth="1.0" stencil="0" />
 
     <command type="quad" enabled="True" tag="ShowRTT" vs="CopyFramebuffer" ps="CopyFramebuffer" blend="replace" output="viewport">

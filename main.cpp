@@ -69,6 +69,7 @@ public:
             vp = SharedPtr<Viewport>(new Viewport(context_, scene, camera));
             vp->SetRenderPath(cache->GetResource<XMLFile>("CoreData/RenderPaths/ForwardPaint.xml"));
             rp = vp->GetRenderPath();
+            //rp->SetEnabled("Blur", false); // by default turn-off blur for RTT
             Renderer* renderer = GetSubsystem<Renderer>();
             
             renderer->SetViewport(0, vp);
@@ -141,6 +142,7 @@ public:
     {
         using namespace KeyDown;
         bool colorChange = false;
+        static bool useBlurPostProcess = false;
 
         int key = eventData[P_KEY].GetInt();
         if (key == KEY_ESC)
@@ -176,6 +178,12 @@ public:
         {
             brushColor = Color(1.0f, 1.0f, 1.0f);
             colorChange = true;
+        }
+
+        if (key == KEY_B) 
+        {
+            rp->SetEnabled("Blur", useBlurPostProcess);               
+            useBlurPostProcess = !useBlurPostProcess;
         }
 
 
