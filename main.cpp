@@ -22,7 +22,9 @@ public:
     const float defaultBrushSizeMax = 10.0;
     const float defaultBrushSizeMin = 1.0;
 
-    float brushSize; 
+    float brushSize;
+    int lx;
+    int ly;
     
     SharedPtr<RenderPath> rp;
     bool goToClearRTT;
@@ -196,6 +198,8 @@ public:
         float z = (brushSize > defaultBrushSizeMax) ? defaultBrushSizeMax : ((defaultBrushSizeMin > brushSize) ? defaultBrushSizeMin : brushSize);
         
         Vector3 projection = vp->ScreenToWorldPoint(x, y, z);
+        lx = x;
+        ly = y;
 
         brushNode->SetWorldPosition(projection);
         
@@ -244,6 +248,13 @@ public:
             else
                 brushSize = defaultBrushSizeMin;
         }
+
+        float z = (brushSize > defaultBrushSizeMax) ? defaultBrushSizeMax : ((defaultBrushSizeMin > brushSize) ? defaultBrushSizeMin : brushSize);
+
+        Vector3 projection = vp->ScreenToWorldPoint(lx, ly, z);
+
+        brushNode->SetWorldPosition(projection);
+
     }
       
     void ActualizeBrushState(int btn, int down = -1) 
@@ -257,7 +268,7 @@ public:
             {
                 brushModel->SetViewMask(1); // if mouse left btn are pressed - show brush (render to RTT)
                 rp->SetEnabled("Drawning", true); // change state for RenderPath command see (ForwardPaint.xml
-                previewBrushModel->SetViewMask(0); // hide preview brush at all white user doing paint process on RTT
+                previewBrushModel->SetViewMask(0); // hide preview brush at all while user doing paint process on RTT
             }
             else if (down == 0) // if drawing end with btn release
             {
@@ -276,7 +287,7 @@ public:
                 
                 brushModel->SetViewMask(1); // if mouse left btn are pressed - show brush (render to RTT)
                 rp->SetEnabled("Drawning", true); // change state for RenderPath command see (ForwardPaint.xml
-                previewBrushModel->SetViewMask(0); // hide preview brush at all white user doing paint process on RTT
+                previewBrushModel->SetViewMask(0); // hide preview brush at all while user doing paint process on RTT
 
             }
             else if (down == 0)
